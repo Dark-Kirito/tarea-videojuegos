@@ -1,0 +1,50 @@
+git checkout -b master
+echo "<!DOCTYPE html>
+<html>
+    <head>
+        <title>Videojuegos</title>
+        </head>
+        <body>
+         <h1>¿Qué son los videojuegos?</h1>
+            <p>Un videojuego es una aplicación de entretenimiento que, mediante el uso de dispositivos electrónicos,
+                 permite a los usuarios interactuar con elementos gráficos en la pantalla.</p>
+        </body>
+</html>" > videojuegos1.html
+
+echo "<!DOCTYPE html>
+<html>
+    <head>
+        <title>Videojuegos</title>
+    </head>
+    <body>
+        <h1>Definición de Videojuegos</h1>
+        <p>Los videojuegos son sistemas electrónicos de juego que crean una experiencia interactiva visual y auditiva a través de dispositivos electrónicos.</p>
+    </body>
+</html>" > videojuegos2.html
+
+git add videojuegos1.html videojuegos2.html
+git commit -m "Añadir archivos HTML con descripción de los videojuegos"
+git push origin master
+
+git checkout -b gh-pages
+
+echo "<!DOCTYPE html>
+<html>
+    <head>
+        <title>Información del Estudiante</title>
+    </head>
+    <body>
+        <h1>Información del Estudiante</h1>
+        <p>Nombre: Pedro Pablo Ramos</p><p>Matrícula: 2-17-1401</p>
+        <h2>Descripción de los videojuegos</h2>
+        <p>Los videojuegos son formas de entretenimiento electrónico que permiten a los jugadores interactuar
+             con mundos virtuales o simulaciones creadas a partir de gráficos y sonidos.
+        </p>
+    </body>
+</html>" > index.html
+
+git add index.html
+git commit -m "Añadir archivo index.html con información del estudiante y descripción de los videojuegos"
+git push origin gh-pages
+
+
